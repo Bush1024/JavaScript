@@ -1,0 +1,194 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>love</title>
+<style>
+	#wrap{
+		width: 650px;
+		height: 975px;
+		border: 1px solid black;
+		box-shadow: 0px 20px 300px purple;
+		background:url(bg2.jpg) no-repeat center;
+		margin:0 auto;
+		
+	}
+	#love{
+		text-align:center;
+		margin:0 auto;
+		font-size: 20px;
+		line-height: 20px;
+		margin-top: 200px;
+		position:relative;
+		animation: tc 2s ease-in-out;
+		overflow: hidden;
+	}
+	#txt{
+		text-align: center;
+		animation: tm2 2s infinite;
+		font-family:"黑体";
+	}
+	@keyframes tm2{
+		0%{opacity: 1;transform: rotateX(0deg);letter-spacing: 0px;}
+		50%{opacity:0.5;transform: rotateX(90deg);letter-spacing:5px;}
+		100%{opacity: 1;transform: rotateX(0deg);letter-spacing:0px; }
+	}
+	@keyframes tc{
+		from{width: 0px;height:0px;top: 400px;}
+		to{ width:500px;height:150px;top:0px;}
+	}
+	.bh{
+		animation: play 2s  infinite ;
+		-webkit-animation: play 2s  infinite ;
+	}
+	@keyframes play{
+		0%{background:white}
+		50%{background:red}
+		100%{backgroudn:white}
+	}
+	@-webkit-keyframes play{
+		0%{background:white}
+		50%{background:red}
+		100%{backgroudn:white}
+	}
+	img{
+		width: 0px;
+		display:none;
+	}
+	#a1{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		left: 20%;
+		top: 10%;
+		animation-delay: 1s;
+	}
+	#a2{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		left: 5%;
+		top: 25%;
+	}
+	#a3{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		right: 15%;
+		top: 15%;
+		animation-delay: 1s;
+	}
+	#a4{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		right: 8%;
+		top: 36%;
+		animation-delay: 1s;
+	}
+	#a5{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		left: 10%;
+		top: 57%;
+	}
+	#a6{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		right: 25%;
+		top: 30%;
+		animation-delay: 1s;
+	}
+	#a7{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		right: 13%;
+		top: 60%;
+	}
+	#a8{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		left: 25%;
+		top: 70%;
+	}
+	#a9{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		left: 50px;
+		top: 690px;
+		animation-delay: 1s;
+	}
+	#a10{
+		animation: flash 2s infinite ease-in-out;
+		position:absolute;
+		right: 220px;
+		top: 670px;
+		
+	}
+	#abig{
+		width: 250px;
+		animation: tm 3s infinite ease-in-out;
+		margin: 0 auto;
+	}
+	@keyframes flash{
+		0%{width:0px;}
+		50%{width:50px;}
+		100%{width:0px;}
+	}
+	@keyframes tm{
+		0%{opacity: 0.7;transform: rotateY(0deg);margin-top:0px}
+		50%{opacity: 1;transform: rotateY(180deg);margin-top:200px}
+		100%{opacity: 0.7;transform: rotateY(0deg); margin-top:0px}
+	}
+</style>
+<script>
+function show(){/*9字红闪烁*/
+	var txt=document.getElementById("txt");
+	var spans=document.getElementsByTagName("span");
+	var i=0;
+	txt.innerText="Loading...";
+	var xh=setInterval(function(){/*设置数字遍历变红循环*/
+		spans[i].setAttribute("class","bh");i++;
+		if(i==spans.length){/*当遍历到最后一个9时*/
+			var xh2=setTimeout(function(){/*闪烁3秒后进入下一环节*/
+					for(var n=0;n<spans.length;n++){spans[n].setAttribute("class"," ");}/*清空闪烁背景*/
+					var xh3=setTimeout(function(){/*延迟0.1秒后弹窗*/
+						var name=prompt("请输入名字：");
+						confirm(name+",有句话想对你说：")
+						txt.innerText="For my ambition";
+					for(var m=0;m<spans.length;m++){spans[m].setAttribute("class","bh");
+				   var imgs=document.getElementsByTagName("img");
+					for(var v=0;v<imgs.length;v++){imgs[v].style.display="block";}
+												   }/*统一添加闪烁背景*/
+										 },100)
+								 },3000);
+					clearInterval(xh);	   }
+			 /*清除循环*/},90);
+}	
+</script>
+</head>
+
+<body onkeydown="show();">
+<audio  autoplay>
+  <source src="bg.mp3" type="audio/mpeg">
+</audio>
+<div id="wrap">
+<div id="love" ><span>9</span><span>9</span>66<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>666<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>66<span>9</span><span>9</span>6666<span>9</span><span>9</span>666<span>9</span><span>9</span><span>9</span><span>9</span>666<span>9</span><span>9</span>6666<span>9</span><span>9</span><br>
+<span>9</span><span>9</span>6<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>6<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>6<span>9</span><span>9</span>6666<span>9</span><span>9</span>66<span>9</span><span>9</span>66<span>9</span><span>9</span>66<span>9</span><span>9</span>6666<span>9</span><span>9</span><br>
+<span>9</span><span>9</span>66<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>66<span>9</span><span>9</span>6666<span>9</span><span>9</span>6<span>9</span><span>9</span>6666<span>9</span>66<span>9</span><span>9</span>6666<span>9</span><span>9</span><br>
+<span>9</span><span>9</span>6666<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>66666<span>9</span><span>9</span><span>9</span><span>9</span>666<span>9</span><span>9</span>6666<span>9</span><span>9</span>6<span>9</span><span>9</span>6666<span>9</span><span>9</span><br>
+<span>9</span><span>9</span>666666<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>66666666<span>9</span><span>9</span>6666<span>9</span><span>9</span>6666<span>9</span><span>9</span>6<span>9</span><span>9</span>6666<span>9</span><span>9</span><br>
+<span>9</span><span>9</span>66666666<span>9</span><span>9</span><span>9</span><span>9</span>6666666666<span>9</span><span>9</span>66666<span>9</span><span>9</span>66<span>9</span><span>9</span>66<span>9</span><span>9</span>6666<span>9</span><span>9</span><br>
+<span>9</span><span>9</span>666666666<span>9</span><span>9</span>66666666666<span>9</span><span>9</span>666666<span>9</span><span>9</span><span>9</span><span>9</span>6666<span>9</span><span>9</span><span>9</span><span>9</span><span>9</span><span>9</span>6<br>
+</div>
+<p id="txt">请按任意键...</p>
+<img src="love.png" alt=""  id="a1">
+<img src="love.png" alt=""  id="a2">
+<img src="love.png" alt=""  id="a3">
+<img src="love.png" alt=""  id="a4">
+<img src="love.png" alt=""  id="a5">
+<img src="love.png" alt=""  id="a6">
+<img src="love.png" alt=""  id="a7">
+<img src="love.png" alt=""  id="a8">
+<img src="love.png" alt=""  id="a9">
+<img src="love.png" alt=""  id="a10">
+<img src="love.png" alt="" id="abig">
+</div>
+</body>
+</html>

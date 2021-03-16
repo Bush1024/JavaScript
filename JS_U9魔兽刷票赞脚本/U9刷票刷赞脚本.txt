@@ -1,0 +1,45 @@
+http://war3.uuu9.com/Soft/202002/44906.shtml#sendComment
+浏览器Cookie禁用--inetcpl.cpl-----IE自带禁用功能
+使用前要禁用Cookie！！！
+评分：
+==========================================
+window.alert = function() {return false;};
+var i = document.getElementById('scorecount').innerText;
+var time = new Date().getTime();
+console.log("开始刷分:");
+function vote(x){
+add(x);
+return;}
+function view(){
+console.log("评分数据："+document.getElementById('scoredata').innerText+";(按F5刷新停止页面刷分)");
+console.log("已刷票数："+(document.getElementById('scorecount').innerText-i)+"; 耗时:"+(new Date().getTime()-time)/1000+"s;");}
+setInterval("vote(10)",2000);
+setInterval("view()",3000);
+===============================================
+十星评分
+var iframe = document.createElement("iframe");
+iframe.id = "iframe";
+document.body.appendChild(iframe);
+function vote(){
+document.getElementById("iframe").src = "http://war3.uuu9.com/score.aspx?channelid=2&articleid=45152&score=10";}
+setInterval("vote()",1000);
+=========================================
+下载量
+var iframe = document.createElement("iframe");
+iframe.id = "iframe";
+iframe.style.display="none";
+document.body.appendChild(iframe);
+function vote(){
+document.getElementById("iframe").src = "http://war3.uuu9.com/score.aspx?channelid=2&articleid=44906&score=10";}
+setInterval("vote()",1000);
+================================================
+赞：
+======================================================
+window.alert = function() {return false;};
+function zan(){
+voteComm('war3',2, 44906, 21320, 1, 'newzz21320');
+voteComm('war3',2, 44906, 21348, 1, 'newzz21348');
+}setInterval("zan()",2000);
+
+
+========================================================
