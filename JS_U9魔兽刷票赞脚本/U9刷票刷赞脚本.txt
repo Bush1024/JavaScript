@@ -1,22 +1,22 @@
 http://war3.uuu9.com/Soft/202002/44906.shtml#sendComment
-ä¯ÀÀÆ÷Cookie½ûÓÃ--inetcpl.cpl-----IE×Ô´ø½ûÓÃ¹¦ÄÜ
-Ê¹ÓÃÇ°Òª½ûÓÃCookie£¡£¡£¡
-ÆÀ·Ö£º
+æµè§ˆå™¨Cookieç¦ç”¨--inetcpl.cpl-----IEè‡ªå¸¦ç¦ç”¨åŠŸèƒ½
+ä½¿ç”¨å‰è¦ç¦ç”¨Cookieï¼ï¼ï¼
+è¯„åˆ†ï¼š
 ==========================================
 window.alert = function() {return false;};
 var i = document.getElementById('scorecount').innerText;
 var time = new Date().getTime();
-console.log("¿ªÊ¼Ë¢·Ö:");
+console.log("å¼€å§‹åˆ·åˆ†:");
 function vote(x){
 add(x);
 return;}
 function view(){
-console.log("ÆÀ·ÖÊı¾İ£º"+document.getElementById('scoredata').innerText+";(°´F5Ë¢ĞÂÍ£Ö¹Ò³ÃæË¢·Ö)");
-console.log("ÒÑË¢Æ±Êı£º"+(document.getElementById('scorecount').innerText-i)+"; ºÄÊ±:"+(new Date().getTime()-time)/1000+"s;");}
+console.log("è¯„åˆ†æ•°æ®ï¼š"+document.getElementById('scoredata').innerText+";(æŒ‰F5åˆ·æ–°åœæ­¢é¡µé¢åˆ·åˆ†)");
+console.log("å·²åˆ·ç¥¨æ•°ï¼š"+(document.getElementById('scorecount').innerText-i)+"; è€—æ—¶:"+(new Date().getTime()-time)/1000+"s;");}
 setInterval("vote(10)",2000);
 setInterval("view()",3000);
 ===============================================
-Ê®ĞÇÆÀ·Ö
+åæ˜Ÿè¯„åˆ†
 var iframe = document.createElement("iframe");
 iframe.id = "iframe";
 document.body.appendChild(iframe);
@@ -24,7 +24,7 @@ function vote(){
 document.getElementById("iframe").src = "http://war3.uuu9.com/score.aspx?channelid=2&articleid=45152&score=10";}
 setInterval("vote()",1000);
 =========================================
-ÏÂÔØÁ¿
+ä¸‹è½½é‡
 var iframe = document.createElement("iframe");
 iframe.id = "iframe";
 iframe.style.display="none";
@@ -33,13 +33,38 @@ function vote(){
 document.getElementById("iframe").src = "http://war3.uuu9.com/score.aspx?channelid=2&articleid=44906&score=10";}
 setInterval("vote()",1000);
 ================================================
-ÔŞ£º
+èµï¼š
 ======================================================
+//ç½‘é¡µå…ƒç´ ç‚¹å‡»åˆ·èµ
 window.alert = function() {return false;};
 function zan(){
 voteComm('war3',2, 44906, 21320, 1, 'newzz21320');
 voteComm('war3',2, 44906, 21348, 1, 'newzz21348');
 }setInterval("zan()",2000);
+
+//åˆ©ç”¨AJAXè¯·æ±‚åˆ·èµ
+window.alert = function() {return false;};
+var x = 1623404500099;
+function AutoVote(){
+var js_xhr = new XMLHttpRequest();
+js_xhr.open('GET','http://comment.uuu9.com/Index/vote?format=json&jsoncallback=jQuery18305272669186830667_1623404170128&site=war3&channelid=2&aid=44906&psize=21064&vfiled=1&_='+x);
+js_xhr.withCredentials = true;
+js_xhr.send();
+js_xhr.onreadystatechange = function(){
+    if(js_xhr.readyState === 4 && js_xhr.status ===200){
+        alert(js_xhr.responseText);
+}};}
+
+setInterval(function(){
+	x+=10000;
+	AutoVote();
+},2000)
+
+	
+
+	
+
+
 
 
 ========================================================
